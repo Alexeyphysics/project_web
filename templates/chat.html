@@ -1,0 +1,148 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">-->
+<!--    <link rel="stylesheet" href="/static/css/icon-font.css">-->
+<!--    <link rel="stylesheet" href="/static/css/style.css">-->
+<!--    <meta name="author" content="Kondratenko Alexey">-->
+<!--    <meta name="keywords"  content="приключение, шары,летающий шар">-->
+<!--    <link rel="icon" href="/static/icons/Icon-logo.png" type="image/x-icon">-->
+<!--    <meta name="description"  content="Если ищите незабываемый отдых с семьей или друзьями, мы готовы предложить вам лучшие туры и впечатления на любой вкус!">-->
+<!--    <title>Ballons</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--    <div class="container">-->
+
+<!--        <div class="navigation">-->
+<!--            <input type="checkbox" class="navigation__toggle" id="navin-toggle">-->
+<!--            <label for="navin-toggle" class="navigation__button">-->
+<!--                <span class="navigation__icon"></span>-->
+<!--            </label>-->
+<!--            <div class="navigation__background"></div>-->
+<!--            <nav class="navigation__nav">-->
+<!--                <ul class="navigation__list">-->
+<!--                    <li class="navigation__item"><a href="about" class="navigation__link">о нас</a></li>-->
+<!--                    <li class="navigation__item"><a href="#" class="navigation__link">скидки</a></li>-->
+<!--                    <li class="navigation__item"><a href="best-tour" class="navigation__link">лучшие туры</a></li>-->
+<!--                    <li class="navigation__item"><a href="#" class="navigation__link">калькулятор цены</a></li>-->
+<!--                    <li class="navigation__item"><a href="#" class="navigation__link">связаться с нами</a></li>-->
+<!--                </ul>-->
+<!--            </nav>-->
+<!--        </div>-->
+
+<!--        <main>-->
+
+
+<!--            <section class="section-book" id="go_to_book">-->
+<!--                <div class="row">-->
+<!--                    <div class="book">-->
+<!--                        <div class="book__form">-->
+<!--                            <form action="orders/postdata" method="post" class="form"   onsubmit=" sendMessage(event)" name="userForm" >-->
+<!--                                <div class="text-align-center margin-bottom-30px">-->
+<!--                                    <h2 class="title-secondary">-->
+<!--                                        ЗАБРОНИРОВАТЬ ТУР-->
+<!--                                    </h2>-->
+<!--                                </div>-->
+<!--                                <div class="form__group">-->
+<!--                                    <input type="text" class="form__input" placeholder="Имя Фамилия" id="name_surname" required  pattern="[А-ЯЁ]{1}[а-яё]{1,15}\s[А-ЯЁ]{1}[а-яё]{1,15}" autocomplete="off">-->
+<!--                                    <span class="error" aria-live="polite"></span>-->
+<!--                                    <label for="name_surname" class="form__label">Ваше Имя и Фамилия</label>-->
+<!--                                </div>-->
+
+<!--                                <div class="form__group">-->
+<!--                                    <input type="email" class="form__input" name="user_email" placeholder="Ваш email" id="mail" required minlength="10">-->
+<!--                                    <span class="error" aria-live="polite"></span>-->
+<!--                                    <label for="mail" class="form__label">Ваш email</label>-->
+<!--                                </div>-->
+
+<!--                                <div class="form__group">-->
+<!--                                    <div class="form__group-radio">-->
+<!--                                        <input type="radio" class="form__input-radio"  id="tour-1" name="time_" required>-->
+<!--                                        &lt;!&ndash; <span class="error" aria-live="polite"></span> &ndash;&gt;-->
+<!--                                        <label for="tour-1" class="form__label-radio">-->
+<!--                                            <span class="form__button-radio"></span>-->
+<!--                                            Групповой тур</label>-->
+<!--                                    </div>-->
+
+<!--                                    <div class="form__group-radio">-->
+<!--                                        <input type="radio" class="form__input-radio" id="tour-2" name="time_">-->
+<!--                                        <label for="tour-2" class="form__label-radio">-->
+<!--                                            <span class="form__button-radio"></span>-->
+<!--                                            Индивидуальный тур</label>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="form__group">-->
+<!--                                    <button href="#" type="submit" class="btn btn_brown" value="Send">ЗАБРОНИРОВАТЬ</button>-->
+<!--                                </div>-->
+
+<!--                            </form>-->
+
+<!--                            <div class="form__group">-->
+<!--                                    <h1>WebSocket Chat</h1>-->
+<!--                                    <h2>Your ID: <span id="ws-id"></span></h2>-->
+
+<!--&lt;!&ndash;                                    <form action="" onsubmit="sendMessage(event)">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <input type="text" id="messageText" autocomplete="off"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <button>Send</button>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </form>&ndash;&gt;-->
+
+<!--                                    <ul id='messages'></ul>-->
+
+
+
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </section>-->
+<!--        </main>-->
+<!--        <footer class="footer">-->
+<!--            <div class="row text-align-center">-->
+<!--                <a href="#">-->
+<!--                    <img src="/static/icons/Icon-logo.svg" alt="logo" class="footer__logo">-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--                <ul class="footer__list">-->
+<!--                    <li class="footer__item"><a href="about" class="footer__link">о нас</a></li>-->
+<!--                    <li class="footer__item"><a href="#" class="footer__link">скидки</a></li>-->
+<!--                    <li class="footer__item"><a href="best-tour" class="footer__link">лучшие туры</a></li>-->
+<!--                    <li class="footer__item"><a href="#" class="footer__link">калькулятор цены</a></li>-->
+<!--                    <li class="footer__item"><a href="#" class="footer__link">связаться с нами</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </footer>-->
+
+<!--    </div>-->
+
+<!--   <script src="/static/js/index.js"></script>-->
+<!--    <script>-->
+<!--        function appendMessage(msg) {-->
+<!--            let messages = document.getElementById('messages')-->
+<!--            let message = document.createElement('li')-->
+<!--            let content = document.createTextNode(msg)-->
+<!--            message.appendChild(content)-->
+<!--            messages.appendChild(message)-->
+<!--        }-->
+
+<!--        let client_id = Date.now()-->
+<!--        document.querySelector("#ws-id").textContent = client_id;-->
+<!--        let ws = new WebSocket(`ws://localhost:8000/index/ws/${client_id}`);-->
+<!--        ws.onmessage = function (event) {-->
+<!--            appendMessage(event.data)-->
+<!--        };-->
+
+<!--        function sendMessage(event) {-->
+<!--            let input = document.getElementById("name_surname")-->
+<!--            ws.send(input.value)-->
+<!--            input.value = ''-->
+<!--            event.preventDefault()-->
+<!--        }-->
+<!--    </script>-->
+<!--</body>-->
+<!--</html>-->
