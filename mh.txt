@@ -1,0 +1,24 @@
+1)для обновления таблицы в query:
+delete from alembic_version where version_num='e39d16e62810'
+
+2) создание новой миграции
+alembic revision --autogenerate -m "third"
+alembic upgrade 5c4146483d87
+
+3) Для удаления зависимых таблиц
+DROP TABLE tab_name CASCADE;
+
+4) команды для добавления или просмотра sql
+- SELECT * FROM role;
+- insert into role values (1,'user',null),(2,'admin',null);
+- select * from public.user;
+
+5) демонстрация аутентификации
+lesson 5 ~38.30, (сначала регистр, потом ауth с тем что ввели, пароль и тд)
+
+6)# акумулирует информацию для алембик, чтобы прогонять ревизии
+metadata = MetaData()
+
+7) # когда все сломал
+alembic stamp head
+
